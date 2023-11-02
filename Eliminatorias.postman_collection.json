@@ -1,0 +1,984 @@
+{
+	"info": {
+		"_postman_id": "61a13587-c690-4bd2-98cf-f6414df2435a",
+		"name": "Eliminatorias",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29694479"
+	},
+	"item": [
+		{
+			"name": "Equipos",
+			"item": [
+				{
+					"name": "createEquipo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYXZpZXIyMyIsImlhdCI6MTY5NzQxODAxMywiZXhwIjoxNjk3NTA0NDEzfQ.2TXZDG8smPZZoDAZBEmB2g05fMZW223JIqrkN5vEmmM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bandera\": \"ARG\",\r\n    \"directorTecnico\": \"Javier Figueroa\",\r\n    \"nombre\": \"Argentina\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/api/equipos",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"equipos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAllEquipos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKYXZpZXIgRnQiLCJpYXQiOjE2OTczMTgzMTAsImV4cCI6MTY5NzQwNDcxMH0.sBhOltTJNJDXF4IAlSy6pHs_Pe4a8XyjrabR1h6jIY0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/api/equipos",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"equipos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findEquipoById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKYXZpZXIgRnQiLCJpYXQiOjE2OTczMTgzMTAsImV4cCI6MTY5NzQwNDcxMH0.sBhOltTJNJDXF4IAlSy6pHs_Pe4a8XyjrabR1h6jIY0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/api/equipos/7",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"equipos",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateEquipo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKYXYiLCJpYXQiOjE2OTcxNDY1MDUsImV4cCI6MTY5NzIzMjkwNX0.VYXdl_6iWtUfdMlEFwS64x4c6rA9R8Nt-bMoWdmzMuw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bandera\": \"VEN\",\r\n    \"directorTecnico\": \"Jossy Figueroa\",\r\n    \"nombre\": \"Venezuela\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/api/equipos/7",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"equipos",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteEquipo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKYXYiLCJpYXQiOjE2OTcxNDY1MDUsImV4cCI6MTY5NzIzMjkwNX0.VYXdl_6iWtUfdMlEFwS64x4c6rA9R8Nt-bMoWdmzMuw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/api/equipos/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"equipos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByNombre",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKYXYiLCJpYXQiOjE2OTcxNDY1MDUsImV4cCI6MTY5NzIzMjkwNX0.VYXdl_6iWtUfdMlEFwS64x4c6rA9R8Nt-bMoWdmzMuw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/api/equipos/nombre?nombre=Argentina",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"equipos",
+								"nombre"
+							],
+							"query": [
+								{
+									"key": "nombre",
+									"value": "Argentina"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByBandera",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKYXYiLCJpYXQiOjE2OTcxNDY1MDUsImV4cCI6MTY5NzIzMjkwNX0.VYXdl_6iWtUfdMlEFwS64x4c6rA9R8Nt-bMoWdmzMuw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/api/equipos/bandera?bandera=ARG",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"equipos",
+								"bandera"
+							],
+							"query": [
+								{
+									"key": "bandera",
+									"value": "ARG"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByDirectorTecnico",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKYXYiLCJpYXQiOjE2OTcxNDY1MDUsImV4cCI6MTY5NzIzMjkwNX0.VYXdl_6iWtUfdMlEFwS64x4c6rA9R8Nt-bMoWdmzMuw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/api/equipos/directorTecnico?directorTecnico=Javier Figueroa",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"equipos",
+								"directorTecnico"
+							],
+							"query": [
+								{
+									"key": "directorTecnico",
+									"value": "Javier Figueroa"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByNombreContaining",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKYXYiLCJpYXQiOjE2OTcxNDY1MDUsImV4cCI6MTY5NzIzMjkwNX0.VYXdl_6iWtUfdMlEFwS64x4c6rA9R8Nt-bMoWdmzMuw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/api/equipos/nombreContaining?nombre=Arge",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"equipos",
+								"nombreContaining"
+							],
+							"query": [
+								{
+									"key": "nombre",
+									"value": "Arge"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByBanderaContaining",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKYXYiLCJpYXQiOjE2OTcxNDY1MDUsImV4cCI6MTY5NzIzMjkwNX0.VYXdl_6iWtUfdMlEFwS64x4c6rA9R8Nt-bMoWdmzMuw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/api/equipos/banderaContaining?bandera=A",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"equipos",
+								"banderaContaining"
+							],
+							"query": [
+								{
+									"key": "bandera",
+									"value": "A"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByDirectorTecnicoContaining",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKYXYiLCJpYXQiOjE2OTcxNDY1MDUsImV4cCI6MTY5NzIzMjkwNX0.VYXdl_6iWtUfdMlEFwS64x4c6rA9R8Nt-bMoWdmzMuw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/api/equipos/directorTecnicoContaining?directorTecnico=J",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"equipos",
+								"directorTecnicoContaining"
+							],
+							"query": [
+								{
+									"key": "directorTecnico",
+									"value": "J"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Partidos",
+			"item": [
+				{
+					"name": "findAllPartidos",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKYXZpZXIgRnQiLCJpYXQiOjE2OTc0MTE2ODQsImV4cCI6MTY5NzQ5ODA4NH0.8yo6bpjiymlAJ3p6C_qNLtZR755MCRGprepRxl2Kjwk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/api/partidos",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"partidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findPartidoById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKYXZpZXIgRnQiLCJpYXQiOjE2OTc0MTE2ODQsImV4cCI6MTY5NzQ5ODA4NH0.8yo6bpjiymlAJ3p6C_qNLtZR755MCRGprepRxl2Kjwk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/api/partidos/8",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"partidos",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createPartido",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKYXZpZXIgRnQiLCJpYXQiOjE2OTc0MTE2ODQsImV4cCI6MTY5NzQ5ODA4NH0.8yo6bpjiymlAJ3p6C_qNLtZR755MCRGprepRxl2Kjwk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"fecha\": \"2023-10-27\",\r\n  \"estadio\": \"Metropolitano\",\r\n  \"local\": {\r\n    \"id\": 4\r\n  },\r\n  \"visitante\": {\r\n    \"id\": 6\r\n  },\r\n  \"arbitroPrincipal\": \"Juls Brown\",\r\n  \"resultado\": {\r\n      \"id\": 12\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/api/partidos",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"partidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePartido",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKYXZpZXIgRnQiLCJpYXQiOjE2OTc0MTE2ODQsImV4cCI6MTY5NzQ5ODA4NH0.8yo6bpjiymlAJ3p6C_qNLtZR755MCRGprepRxl2Kjwk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"fecha\": \"2023-10-19\",\r\n  \"estadio\": \"Metropolitano D\",\r\n  \"local\": {\r\n    \"id\": 4\r\n  },\r\n  \"visitante\": {\r\n    \"id\": 5\r\n  },\r\n  \"arbitroPrincipal\": \"Juls Brown\",\r\n  \"resultado\": {\r\n      \"id\": 15\r\n  }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/api/partidos/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"partidos",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletePartido",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKYXZpZXIgRnQiLCJpYXQiOjE2OTczMjM0MzksImV4cCI6MTY5NzQwOTgzOX0.V1wR3uwKF47esuUxJ_J5Kg9lEdD7n1f-tKWjVWMF4mE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/api/partidos/10",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"partidos",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByFecha",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKYXZpZXIgRnQiLCJpYXQiOjE2OTczMTgzMTAsImV4cCI6MTY5NzQwNDcxMH0.sBhOltTJNJDXF4IAlSy6pHs_Pe4a8XyjrabR1h6jIY0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/api/partidos/fecha?fecha=2023-10-27",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"partidos",
+								"fecha"
+							],
+							"query": [
+								{
+									"key": "fecha",
+									"value": "2023-10-27"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByEstadio",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKYXZpZXIgRnQiLCJpYXQiOjE2OTczMTgzMTAsImV4cCI6MTY5NzQwNDcxMH0.sBhOltTJNJDXF4IAlSy6pHs_Pe4a8XyjrabR1h6jIY0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/api/partidos/estadio?estadio=Metropolitano D",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"partidos",
+								"estadio"
+							],
+							"query": [
+								{
+									"key": "estadio",
+									"value": "Metropolitano D"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByEquipo",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKYXZpZXIgRnQiLCJpYXQiOjE2OTczMTgzMTAsImV4cCI6MTY5NzQwNDcxMH0.sBhOltTJNJDXF4IAlSy6pHs_Pe4a8XyjrabR1h6jIY0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/api/partidos/equipo?idEquipo=6",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"partidos",
+								"equipo"
+							],
+							"query": [
+								{
+									"key": "idEquipo",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByArbitroPrincipal",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKYXYiLCJpYXQiOjE2OTcxNTIzOTIsImV4cCI6MTY5NzIzODc5Mn0.QUxatf-Rr3h2o13GVqX896vfd_VcDi2dH4wMRv1Wcfk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/api/partidos/arbitroPrincipal?arbitro=Carles Brt",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"partidos",
+								"arbitroPrincipal"
+							],
+							"query": [
+								{
+									"key": "arbitro",
+									"value": "Carles Brt"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Resultados",
+			"item": [
+				{
+					"name": "findAllResultados",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKYXZpZXIgRnQiLCJpYXQiOjE2OTczMTgzMTAsImV4cCI6MTY5NzQwNDcxMH0.sBhOltTJNJDXF4IAlSy6pHs_Pe4a8XyjrabR1h6jIY0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/api/resultados",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"resultados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findResultadoById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKYXZpZXIgRnQiLCJpYXQiOjE2OTczMTgzMTAsImV4cCI6MTY5NzQwNDcxMH0.sBhOltTJNJDXF4IAlSy6pHs_Pe4a8XyjrabR1h6jIY0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/api/resultados/22",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"resultados",
+								"22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createResultado",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKYXZpZXIgRnQiLCJpYXQiOjE2OTczMTgzMTAsImV4cCI6MTY5NzQwNDcxMH0.sBhOltTJNJDXF4IAlSy6pHs_Pe4a8XyjrabR1h6jIY0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"golLocal\": 11,\r\n    \"golVisitante\": 11,\r\n    \"nroTarjetasAmarillas\": 11,\r\n    \"nroTarjetasRojas\": 11\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/api/resultados",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"resultados"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateResultado",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKYXZpZXIgRnQiLCJpYXQiOjE2OTczMTgzMTAsImV4cCI6MTY5NzQwNDcxMH0.sBhOltTJNJDXF4IAlSy6pHs_Pe4a8XyjrabR1h6jIY0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"golLocal\": 11,\r\n    \"golVisitante\": 11,\r\n    \"nroTarjetasAmarillas\": 11,\r\n    \"nroTarjetasRojas\": 21\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8088/api/resultados/22",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"resultados",
+								"22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteResultado",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKYXZpZXIgRnQiLCJpYXQiOjE2OTczMTgzMTAsImV4cCI6MTY5NzQwNDcxMH0.sBhOltTJNJDXF4IAlSy6pHs_Pe4a8XyjrabR1h6jIY0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/api/resultados/20",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"resultados",
+								"20"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByGolLocalOrGolVisitante",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKYXZpZXIgRnQiLCJpYXQiOjE2OTczMTgzMTAsImV4cCI6MTY5NzQwNDcxMH0.sBhOltTJNJDXF4IAlSy6pHs_Pe4a8XyjrabR1h6jIY0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/api/resultados/goles?golLocal=3&golVisitante=2",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"resultados",
+								"goles"
+							],
+							"query": [
+								{
+									"key": "golLocal",
+									"value": "3"
+								},
+								{
+									"key": "golVisitante",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByNroTarjetasAmarillasOrNroTarjetasRojas",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJKYXZpZXIgRnQiLCJpYXQiOjE2OTczMTgzMTAsImV4cCI6MTY5NzQwNDcxMH0.sBhOltTJNJDXF4IAlSy6pHs_Pe4a8XyjrabR1h6jIY0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8088/api/resultados/tarjetas?amarillas=4&rojas=8",
+							"host": [
+								"localhost"
+							],
+							"port": "8088",
+							"path": [
+								"api",
+								"resultados",
+								"tarjetas"
+							],
+							"query": [
+								{
+									"key": "amarillas",
+									"value": "4"
+								},
+								{
+									"key": "rojas",
+									"value": "8"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "JWT",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
